@@ -58,4 +58,43 @@ Busco consolidar minha carreira nas áreas de **Gestão Estratégica, Finanças 
 
 #### **BSC ADVOGADOS ASSOCIADOS**
 > **Gerente Geral**
-> *Set 2025 - Presente | Híbrido
+> *Set 2025 - Presente | Híbrido*
+>
+> Atuo diretamente na gestão estratégica e operacional do escritório, exercendo função de confiança junto à sócio-fundação.
+> * Responsável por alinhar as diretrizes executivas com a rotina do escritório.
+> * Liderança de iniciativas administrativas.
+> * Foco em: Auditoria, Análise de dados e Gestão Estratégica.
+
+#### **AMPLA Consultoria JR**
+> **Gestão de Projetos**
+> *Set 2025 - Presente | Híbrido*
+>
+> Integrante da empresa júnior do curso de Administração da UFT.
+> * Atuação focada em aplicar a excelência acadêmica na resolução de problemas reais de mercado.
+> * Aplicação de metodologias ágeis para diagnóstico e solução de dores empresariais.
+> * Foco em: Análise de negócios e Consultoria.
+
+#### **ARRAES**
+> **Assistente Administrativo (Estágio)**
+> *Set 2024 - Set 2025 | Presencial*
+>
+> * Acompanhamento supervisionado na preparação, organização, análise e arquivamento de documentos.
+> * Suporte em tarefas administrativas e financeiras (contas a receber).
+
+---
+
+## 🎓 Educação
+
+**Universidade Federal do Tocantins (UFT)**
+> **Bacharelado em Administração**
+> *Jul 2024 - Presente*
+>
+> * Ênfase em Gestão Empresarial e Estratégia.
+> * Base técnica robusta para tomada de decisão baseada em dados.
+
+---
+<div align="center">
+  <p align="center">
+    <small>Perfil atualizado em Dezembro de 2025</small>
+  </p>
+</div>
