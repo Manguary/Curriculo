@@ -12,7 +12,8 @@
             --light-bg: #f4f7f6;
             --text-color: #333;
             --white: #ffffff;
-            --accent: #00cba9; /* Toque de modernidade */
+            --accent: #00cba9; /* Verde Água Moderno */
+            --whatsapp: #25D366;
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
@@ -21,10 +22,11 @@
 
         /* HEADER / HERO SECTION */
         header {
-            background: linear-gradient(rgba(0, 74, 173, 0.85), rgba(0, 30, 80, 0.9)), url('banner.png'); /* Sua foto de capa */
+            /* Certifique-se de que a imagem banner.png está na mesma pasta */
+            background: linear-gradient(rgba(0, 74, 173, 0.9), rgba(0, 30, 80, 0.95)), url('banner.png');
             background-size: cover;
             background-position: center;
-            height: 100vh;
+            min-height: 100vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -32,7 +34,6 @@
             text-align: center;
             color: var(--white);
             padding: 20px;
-            position: relative;
         }
 
         .profile-img {
@@ -41,30 +42,33 @@
             border-radius: 50%;
             border: 5px solid var(--white);
             object-fit: cover;
-            margin-bottom: 20px;
+            margin-bottom: 25px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.3);
             transition: transform 0.3s ease;
         }
 
         .profile-img:hover { transform: scale(1.05); }
 
-        h1 { font-size: 3rem; font-weight: 700; margin-bottom: 10px; }
-        h2 { font-size: 1.2rem; font-weight: 300; max-width: 800px; margin-bottom: 30px; opacity: 0.9; }
+        h1 { font-size: 3rem; font-weight: 700; margin-bottom: 10px; letter-spacing: -1px; }
+        h2 { font-size: 1.25rem; font-weight: 300; max-width: 800px; margin-bottom: 35px; opacity: 0.95; }
 
         .btn-cta {
-            padding: 12px 30px;
-            background-color: var(--accent);
-            color: #002d25;
+            padding: 15px 35px;
+            background-color: var(--whatsapp);
+            color: #fff;
             text-decoration: none;
             font-weight: bold;
             border-radius: 50px;
             transition: all 0.3s;
             text-transform: uppercase;
             letter-spacing: 1px;
-            box-shadow: 0 4px 15px rgba(0, 203, 169, 0.4);
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
         }
 
-        .btn-cta:hover { background-color: var(--white); transform: translateY(-3px); }
+        .btn-cta:hover { background-color: #1ebe57; transform: translateY(-3px); }
 
         /* SECTIONS */
         section { padding: 80px 20px; max-width: 1100px; margin: 0 auto; }
@@ -75,8 +79,6 @@
             color: var(--primary);
             margin-bottom: 50px;
             position: relative;
-            display: inline-block;
-            width: 100%;
         }
 
         .section-title::after {
@@ -94,7 +96,7 @@
             background: var(--white);
             padding: 40px;
             border-radius: 15px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
             text-align: center;
         }
 
@@ -124,7 +126,7 @@
         .card .date { font-size: 0.85rem; color: #777; margin-bottom: 15px; display: block; }
         
         /* SKILLS */
-        .skills { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
+        .skills { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-top: 20px;}
         .skill-tag {
             background: #eef4fa;
             color: var(--primary);
@@ -139,21 +141,24 @@
             background: var(--secondary);
             color: var(--white);
             text-align: center;
-            padding: 40px 20px;
+            padding: 60px 20px;
             margin-top: 50px;
         }
 
+        .social-links { margin-top: 20px; }
         .social-links a {
             color: var(--white);
-            font-size: 1.5rem;
+            font-size: 1.8rem;
             margin: 0 15px;
-            transition: color 0.3s;
+            transition: color 0.3s, transform 0.3s;
+            display: inline-block;
         }
-        .social-links a:hover { color: var(--accent); }
+        .social-links a:hover { color: var(--accent); transform: scale(1.1); }
+        .social-links a.fa-whatsapp:hover { color: var(--whatsapp); }
 
         /* RESPONSIVO */
         @media (max-width: 768px) {
-            h1 { font-size: 2rem; }
+            h1 { font-size: 2.2rem; }
             section { padding: 50px 20px; }
         }
     </style>
@@ -162,10 +167,15 @@
 
     <header>
         <img src="perfil.jpg" alt="Iago Manguary" class="profile-img">
+        
         <h1>Iago Manguary</h1>
         <h2>Acadêmico de Administração UFT | Consultoria e Gestão de Projetos | BSC Advogados</h2>
+        
         <br>
-        <a href="#contato" class="btn-cta">Entrar em Contato</a>
+        
+        <a href="https://wa.me/5563993013005" target="_blank" class="btn-cta">
+            <i class="fab fa-whatsapp"></i> Fale Comigo
+        </a>
     </header>
 
     <section id="sobre">
@@ -178,14 +188,13 @@
                 Minha trajetória é marcada pelo dinamismo: <strong>Na Prática</strong>, atuo na gestão estratégica jurídica. 
                 <strong>Na Consultoria</strong>, diagnostico e soluciono dores reais de empresários aplicando metodologias ágeis.
             </p>
-            <br>
+            
             <div class="skills">
                 <span class="skill-tag">Gestão Estratégica</span>
                 <span class="skill-tag">Consultoria Empresarial</span>
                 <span class="skill-tag">Análise de Dados</span>
-                <span class="skill-tag">Liderança</span>
-                <span class="skill-tag">Negociação</span>
-                <span class="skill-tag">Finanças</span>
+                <span class="skill-tag">Liderança & Negociação</span>
+                <span class="skill-tag">Finanças Corporativas</span>
             </div>
         </div>
     </section>
@@ -221,15 +230,15 @@
     <section id="educacao">
         <h2 class="section-title">Formação Acadêmica</h2>
         <div class="about-content" style="text-align: left; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap;">
-            <div>
-                <h3 style="color: var(--primary);">Bacharelado em Administração</h3>
-                <p style="font-weight: bold;">Universidade Federal do Tocantins (UFT)</p>
-                <p style="color: #666;">Jul 2024 - O momento</p>
+            <div style="flex: 1; min-width: 250px;">
+                <h3 style="color: var(--primary); margin-bottom: 5px;">Bacharelado em Administração</h3>
+                <p style="font-weight: bold; margin-bottom: 5px;">Universidade Federal do Tocantins (UFT)</p>
+                <p style="color: #666; font-size: 0.9rem;"><i class="fas fa-graduation-cap"></i> Jul 2024 - O momento</p>
             </div>
-            <div style="background: var(--primary); color: white; padding: 10px 20px; border-radius: 8px; font-weight: bold;">
+            <div style="background: var(--primary); color: white; padding: 10px 25px; border-radius: 8px; font-weight: bold; margin-left: 20px;">
                 UFT
             </div>
-            <p style="width: 100%; margin-top: 15px;">
+            <p style="width: 100%; margin-top: 20px; border-top: 1px solid #eee; padding-top: 20px;">
                 Foco em Gestão Empresarial, Estratégia e Tomada de Decisão Baseada em Dados. O curso proporciona uma base técnica robusta alinhada às práticas modernas de mercado.
             </p>
         </div>
@@ -238,14 +247,23 @@
     <footer id="contato">
         <h2>Vamos conversar?</h2>
         <p>Estou disponível para novos projetos e conexões.</p>
-        <br>
+        
         <div class="social-links">
-            <a href="https://www.linkedin.com/in/iago-manguary" target="_blank"><i class="fab fa-linkedin"></i></a>
-            <a href="mailto:seuemail@exemplo.com"><i class="fas fa-envelope"></i></a>
-            <a href="https://github.com/iagomanguary" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/iago-manguary" target="_blank" title="LinkedIn">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            
+            <a href="https://www.instagram.com/iagomanguary/" target="_blank" title="Instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+
+            <a href="https://wa.me/5563993013005" target="_blank" title="WhatsApp">
+                <i class="fab fa-whatsapp"></i>
+            </a>
         </div>
-        <br>
-        <p style="font-size: 0.8rem; opacity: 0.6;">© 2025 Iago Manguary. Feito com tecnologia e gestão.</p>
+        
+        <br><br>
+        <p style="font-size: 0.8rem; opacity: 0.5;">© 2025 Iago Manguary. Palmas - TO.</p>
     </footer>
 
 </body>
