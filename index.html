@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iago Manguary | Gestão & Consultoria</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #004aad; /* Azul Institucional */
+            --secondary: #1a1a1a;
+            --light-bg: #f4f7f6;
+            --text-color: #333;
+            --white: #ffffff;
+            --accent: #00cba9; /* Toque de modernidade */
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        
+        body { background-color: var(--light-bg); color: var(--text-color); line-height: 1.6; }
+
+        /* HEADER / HERO SECTION */
+        header {
+            background: linear-gradient(rgba(0, 74, 173, 0.85), rgba(0, 30, 80, 0.9)), url('banner.png'); /* Sua foto de capa */
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: var(--white);
+            padding: 20px;
+            position: relative;
+        }
+
+        .profile-img {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            border: 5px solid var(--white);
+            object-fit: cover;
+            margin-bottom: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            transition: transform 0.3s ease;
+        }
+
+        .profile-img:hover { transform: scale(1.05); }
+
+        h1 { font-size: 3rem; font-weight: 700; margin-bottom: 10px; }
+        h2 { font-size: 1.2rem; font-weight: 300; max-width: 800px; margin-bottom: 30px; opacity: 0.9; }
+
+        .btn-cta {
+            padding: 12px 30px;
+            background-color: var(--accent);
+            color: #002d25;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 50px;
+            transition: all 0.3s;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0 4px 15px rgba(0, 203, 169, 0.4);
+        }
+
+        .btn-cta:hover { background-color: var(--white); transform: translateY(-3px); }
+
+        /* SECTIONS */
+        section { padding: 80px 20px; max-width: 1100px; margin: 0 auto; }
+        
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            color: var(--primary);
+            margin-bottom: 50px;
+            position: relative;
+            display: inline-block;
+            width: 100%;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background: var(--accent);
+            margin: 10px auto 0;
+            border-radius: 2px;
+        }
+
+        /* ABOUT */
+        .about-content {
+            background: var(--white);
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            text-align: center;
+        }
+
+        /* CARDS EXPERIENCIA */
+        .cards-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        .card {
+            background: var(--white);
+            padding: 30px;
+            border-radius: 12px;
+            border-left: 5px solid var(--primary);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+
+        .card h3 { color: var(--secondary); margin-bottom: 5px; }
+        .card .company { color: var(--primary); font-weight: bold; font-size: 0.9rem; margin-bottom: 15px; display: block; }
+        .card .date { font-size: 0.85rem; color: #777; margin-bottom: 15px; display: block; }
+        
+        /* SKILLS */
+        .skills { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
+        .skill-tag {
+            background: #eef4fa;
+            color: var(--primary);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        /* FOOTER */
+        footer {
+            background: var(--secondary);
+            color: var(--white);
+            text-align: center;
+            padding: 40px 20px;
+            margin-top: 50px;
+        }
+
+        .social-links a {
+            color: var(--white);
+            font-size: 1.5rem;
+            margin: 0 15px;
+            transition: color 0.3s;
+        }
+        .social-links a:hover { color: var(--accent); }
+
+        /* RESPONSIVO */
+        @media (max-width: 768px) {
+            h1 { font-size: 2rem; }
+            section { padding: 50px 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <img src="perfil.jpg" alt="Iago Manguary" class="profile-img">
+        <h1>Iago Manguary</h1>
+        <h2>Acadêmico de Administração UFT | Consultoria e Gestão de Projetos | BSC Advogados</h2>
+        <br>
+        <a href="#contato" class="btn-cta">Entrar em Contato</a>
+    </header>
+
+    <section id="sobre">
+        <h2 class="section-title">Sobre Mim</h2>
+        <div class="about-content">
+            <p>
+                Sou um profissional focado na intersecção entre a excelência acadêmica e a agilidade do mercado. 
+                Acredito que a administração é a ferramenta chave para transformar o potencial de empresas em resultados concretos.
+                <br><br>
+                Minha trajetória é marcada pelo dinamismo: <strong>Na Prática</strong>, atuo na gestão estratégica jurídica. 
+                <strong>Na Consultoria</strong>, diagnostico e soluciono dores reais de empresários aplicando metodologias ágeis.
+            </p>
+            <br>
+            <div class="skills">
+                <span class="skill-tag">Gestão Estratégica</span>
+                <span class="skill-tag">Consultoria Empresarial</span>
+                <span class="skill-tag">Análise de Dados</span>
+                <span class="skill-tag">Liderança</span>
+                <span class="skill-tag">Negociação</span>
+                <span class="skill-tag">Finanças</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="experiencia">
+        <h2 class="section-title">Experiência Profissional</h2>
+        <div class="cards-container">
+            
+            <div class="card">
+                <h3>Gerente Geral</h3>
+                <span class="company">BSC ADVOGADOS ASSOCIADOS</span>
+                <span class="date"><i class="far fa-calendar-alt"></i> Set 2025 - Presente</span>
+                <p>Atuo diretamente na gestão estratégica e operacional, exercendo função de confiança junto à sócio-fundação. Responsável por alinhar diretrizes executivas, liderança administrativa e análise de dados para tomada de decisão.</p>
+            </div>
+
+            <div class="card">
+                <h3>Gestão de Projetos</h3>
+                <span class="company">AMPLA Consultoria JR (UFT)</span>
+                <span class="date"><i class="far fa-calendar-alt"></i> Set 2025 - Presente</span>
+                <p>Atuação focada em aplicar a excelência acadêmica na resolução de problemas de mercado. Diagnóstico empresarial e consultoria estratégica utilizando metodologias ágeis.</p>
+            </div>
+
+            <div class="card">
+                <h3>Assistente Administrativo</h3>
+                <span class="company">ARRAES</span>
+                <span class="date"><i class="far fa-calendar-alt"></i> Set 2024 - Set 2025</span>
+                <p>Acompanhamento supervisionado na preparação, organização e análise de documentos. Suporte direto em tarefas administrativas e controle financeiro.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="educacao">
+        <h2 class="section-title">Formação Acadêmica</h2>
+        <div class="about-content" style="text-align: left; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap;">
+            <div>
+                <h3 style="color: var(--primary);">Bacharelado em Administração</h3>
+                <p style="font-weight: bold;">Universidade Federal do Tocantins (UFT)</p>
+                <p style="color: #666;">Jul 2024 - O momento</p>
+            </div>
+            <div style="background: var(--primary); color: white; padding: 10px 20px; border-radius: 8px; font-weight: bold;">
+                UFT
+            </div>
+            <p style="width: 100%; margin-top: 15px;">
+                Foco em Gestão Empresarial, Estratégia e Tomada de Decisão Baseada em Dados. O curso proporciona uma base técnica robusta alinhada às práticas modernas de mercado.
+            </p>
+        </div>
+    </section>
+
+    <footer id="contato">
+        <h2>Vamos conversar?</h2>
+        <p>Estou disponível para novos projetos e conexões.</p>
+        <br>
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/iago-manguary" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="mailto:seuemail@exemplo.com"><i class="fas fa-envelope"></i></a>
+            <a href="https://github.com/iagomanguary" target="_blank"><i class="fab fa-github"></i></a>
+        </div>
+        <br>
+        <p style="font-size: 0.8rem; opacity: 0.6;">© 2025 Iago Manguary. Feito com tecnologia e gestão.</p>
+    </footer>
+
+</body>
+</html>
